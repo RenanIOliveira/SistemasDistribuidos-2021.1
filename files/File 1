@@ -1,0 +1,16 @@
+CIF (Common Intermediate Format or Common Interchange Format), also known as FCIF (Full Common Intermediate Format), is a standardized format for the picture resolution, frame rate, color space, and color subsampling of digital video sequences used in video teleconferencing systems. It was first defined in the H.261 standard in 1988.
+
+As the word "common" in its name implies, CIF was designed as a common compromise format to be relatively easy to convert for use either with PAL or NTSC standard displays and cameras. CIF defines a video sequence with a resolution of 352 × 288, which has a simple relationship to the PAL picture size, but with a frame rate of 30000/1001 (roughly 29.97) frames per second like NTSC, with color encoded using a YCbCr representation with 4:2:0 color sampling. It was designed as a compromise between PAL and NTSC schemes, since it uses a picture size that corresponds most easily to PAL, but uses the frame rate of NTSC. The compromise was established as a way to reach international agreement so that video conferencing systems in different countries could communicate with each other without needing two separate modes for displaying the received video.
+Technical details
+
+The simple way to convert NTSC video to CIF is to capture every other field (e.g., the top fields) of interlaced video, downsample it by 2:1 horizontally to convert 704 samples per line to 352 samples per line, and upsample it vertically by a ratio of 6:5 vertically to convert 240 lines to 288 lines. The simple way to convert PAL video to CIF is to similarly capture every other field, downsample it horizontally by 2:1, and introduce some jitter in the frame rate by skipping or repeating frames as necessary. Since H.261 systems typically operated at low bit rates, they also typically operated at low frame rates by skipping many of the camera source frames, so introducing some jitter in the frame rate tended not to be noticeable. More sophisticated conversion schemes (e.g., using deinterlacing to improve the vertical resolution from an NTSC camera) could also be used in higher quality systems.
+
+In contrast to the CIF compromise that originated with the H.261 standard, there are two variants of the SIF (Source Input Format) that was first defined in the MPEG-1 standard. SIF is otherwise very similar to CIF. SIF on 525-line ("NTSC") based systems is 352 × 240 with a frame rate of 30000/1001 frames per second, and on 625-line ("PAL") based systems, it has the same picture size as CIF (352 × 288) but with a frame rate of 25 frames per second.
+
+Some references to CIF are intended to refer only to its resolution (352 × 288), without intending to refer to its frame rate.
+
+The YCbCr color representation had been previously defined in the first standard digital video source format, CCIR 601, in 1982. However, CCIR 601 uses 4:2:2 color sampling, which subsamples the Cb and Cr components only horizontally. H.261 additionally used vertical color subsampling, resulting in what is known as 4:2:0.
+
+QCIF means "Quarter CIF". To have one quarter of the area, as "quarter" implies, the height and width of the frame are halved.
+
+Terms also used are SQCIF (Sub Quarter CIF, sometimes subQCIF), 4CIF (4 × CIF) and 16CIF (16 × CIF). The resolutions for all of these formats are summarized in the table below. 
